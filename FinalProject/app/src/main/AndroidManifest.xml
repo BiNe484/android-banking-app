@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.end.finalproject">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.location.gps"
+        android:required="false"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FinalProject"
+        tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <!-- Khai báo MainActivity -->
+        <activity android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".OtpActivity" />
+        <activity android:name=".home.CustomerHomeActivity"/>
+
+        <activity android:name=".customer.AccountDetailActivity" />
+        <activity android:name=".customer.HistoryActivity" />
+
+        <activity android:name=".home.EmployeeHomeActivity" />
+        <activity android:name=".home.ProfileActivity" />
+
+        <activity android:name=".home.AdminHomeActivity" />
+
+        <activity android:name=".management.DanhSachKhachHangActivity" />
+        <activity android:name=".management.DanhSachNhanVienActivity" />
+        <activity android:name=".management.AccountDetailManagementActivity" />
+        <activity android:name=".management.AddCustomerActivity" />
+        <activity android:name=".management.AddUserActivity" />
+
+        <activity android:name=".entertainment.DatVeXeActivity" />
+        <activity android:name=".entertainment.EntertainmentListActivity" />
+        <activity android:name=".entertainment.DanhSachVeXeActivity" />
+        <activity android:name=".entertainment.ChonGheActivity" />
+        <activity android:name=".entertainment.MyTicketActivity" />
+
+        <activity android:name=".flight.FlightListActivity" />
+        <activity android:name=".flight.SearchFlightActivity" />
+        <activity android:name=".flight.SeatSelectionActivity" />
+
+        <activity android:name=".customer.TransferActivity" />
+        <activity android:name=".customer.TransactionSuccessActivity" />
+        <activity android:name=".customer.TransferInternalActivity" />
+        <activity android:name=".customer.TopUpActivity" />
+        <activity android:name=".customer.MapActivity" />
+    </application>
+
+</manifest>
